@@ -1,5 +1,9 @@
 const Transaction = require('../models/Transaction')
 
+const testRoute = (async(req,res) => {
+    return res.send("Connection Successful")
+})
+
 const showTransaction = (async(req,res) => {
 
     const{userId, startDate, endDate} = req.query
@@ -60,4 +64,4 @@ const deleteTransaction = (async(req,res) => {
 
 })
 
-module.exports = {showTransaction, showTransactionAll, updateTransaction, deleteTransaction, addTransaction}
+module.exports = {showTransaction, showTransactionAll, updateTransaction, deleteTransaction, addTransaction, testRoute}
