@@ -7,6 +7,10 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+const transactionRoute = require('./routes/transactionRoute')
+
+app.use('/digiFin',transactionRoute)
+
 const PORT = process.env.PORT || 3030
 
 mongoose.connect(process.env.DB_URI, {
