@@ -1,6 +1,5 @@
-const { time } = require('console');
 const mongoose = require('mongoose')
-const Float = require('mongoose-float').loadType(mongoose,2);
+const Float = require('mongoose-float').loadType(mongoose);
 
 const transactionSchema = new mongoose.Schema({
     userId: {
