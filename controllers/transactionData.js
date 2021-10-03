@@ -108,7 +108,7 @@ const addTransaction = (async(req,res) => {
     try
     {
         const{userId, transactionDate, transactionId, transactionAmount} = req.body
-
+    
         const transaction = new Transaction({
             userId, transactionDate, transactionId, transactionAmount
         })
