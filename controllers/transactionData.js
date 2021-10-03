@@ -166,8 +166,11 @@ const updateTransaction = (async(req,res) => {
 
 const deleteTransaction = (async(req,res) => {
     try{
-        transactionId = req.query
-        await Transaction.findOneAndDelete({transactionId: transactionId})
+        const {transactionId} = req.query
+        await Transaction.findOneAndRemove({transactionId: transactionId })
+        return res.status(202).json({
+            status: 'record successfully deleted',
+        })
     }
     catch(error) 
     {
@@ -176,9 +179,6 @@ const deleteTransaction = (async(req,res) => {
             error: error.message
         })
     }
-    return res.status(202).json({
-        status: 'record successfully deleted',
-    })
 })
 
 module.exports = {showTransaction, showTransactionAll, updateTransaction, deleteTransaction, addTransaction, testRoute, showTransactionParticular}
