@@ -7,7 +7,7 @@ router.get('/showall', showTransactionAll)
 router.post('/add', addTransaction)
 router.patch('/update', updateTransaction)
 router.delete('/delete', deleteTransaction)
-router.get('/test', testRoute)
+router.get('/', testRoute)
 router.get('/showone', showTransactionParticular)
 
 module.exports = router
