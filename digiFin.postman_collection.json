@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "002ef750-44f4-411d-ac43-a198c7ccc1d5",
+		"name": "digiFin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"user1\",\r\n    \"transactionDate\": \"2021-10-02\",\r\n    \"transactionId\": \"transaction6\",\r\n    \"transactionAmount\": \"150.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/digiFin/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"digiFin",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add transaction",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"user1\",\r\n    \"transactionDate\": \"2021-09-22\",\r\n    \"transactionId\": \"transaction7\",\r\n    \"transactionAmount\": \"200.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/digiFin/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"digiFin",
+								"add"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "http://localhost:5000/digiFin/delete?transactionId=transaction2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/digiFin/delete?transactionId=transaction2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"digiFin",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "transactionId",
+							"value": "transaction2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all transactions of a user between a particular date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/digiFin/show?userId=user2&startDate=2021-09-10&endDate=2021-10-03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"digiFin",
+						"show"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "user2"
+						},
+						{
+							"key": "startDate",
+							"value": "2021-09-10"
+						},
+						{
+							"key": "endDate",
+							"value": "2021-10-03"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Show all transactions of a user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/digiFin/show?userId=user2&startDate=2021-09-10&endDate=2021-10-03",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"digiFin",
+								"show"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "user2"
+								},
+								{
+									"key": "startDate",
+									"value": "2021-09-10"
+								},
+								{
+									"key": "endDate",
+									"value": "2021-10-03"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Show all transactions of a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/digiFin/showall?userId=user2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"digiFin",
+						"showall"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "user2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Show all transactions of a user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/digiFin/showall?userId=user2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"digiFin",
+								"showall"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "user2"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Show a particular transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/digiFin/showone?transactionId=transaction1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"digiFin",
+						"showone"
+					],
+					"query": [
+						{
+							"key": "transactionId",
+							"value": "transaction1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Show a particular transaction",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/digiFin/showone?transactionId=transaction1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"digiFin",
+								"showone"
+							],
+							"query": [
+								{
+									"key": "transactionId",
+									"value": "transaction1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update transaction details",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"user2\",\r\n    \"transactionDate\": \"2021-09-22\",\r\n    \"transactionId\": \"transaction1\",\r\n    \"transactionAmount\": \"2200.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/digiFin/update?transactionId=transaction1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"digiFin",
+						"update"
+					],
+					"query": [
+						{
+							"key": "transactionId",
+							"value": "transaction1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update transaction details",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"user2\",\r\n    \"transactionDate\": \"2021-09-22\",\r\n    \"transactionId\": \"transaction1\",\r\n    \"transactionAmount\": \"2200.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/digiFin/update?transactionId=transaction1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"digiFin",
+								"update"
+							],
+							"query": [
+								{
+									"key": "transactionId",
+									"value": "transaction1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
