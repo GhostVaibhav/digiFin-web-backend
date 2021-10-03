@@ -1,7 +1,7 @@
 const Transaction = require('../models/Transaction')
 
 const testRoute = (async(req,res) => {
-    return res.send("Connection Successful")
+    return res.send(JSON.stringify({version: 0.1, prerelease: true, paths: ["add", "show", "showall", "delete", "update"]}))
 })
 
 const showTransaction = (async(req,res) => {
