@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: false}))
 
 const transactionRoute = require('./routes/transactionRoute')
 
-app.use('/digiFin',transactionRoute)
+app.use('/',transactionRoute)
 
 const PORT = process.env.PORT || 3030
 
