@@ -108,12 +108,12 @@ const addTransaction = (async(req,res) => {
     try
     {
         const{userId, transactionDate, transactionId, transactionAmount} = req.body
-        var date = new Date(transactionDate)
+    
         const transaction = new Transaction({
-            userId, date, transactionId, transactionAmount
+            userId, transactionDate, transactionId, transactionAmount
         })
 
-//         transaction.transactionDate instanceof Date
+        transaction.transactionDate instanceof Date
         
         await transaction.save()
         return res.status(201).json({status: 'record successfully added',data: transaction})
