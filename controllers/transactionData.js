@@ -164,7 +164,7 @@ const updateTransaction = (async(req,res) => {
     }
 })
 
-const deleteTransaction = (async(req,res) => {
+const deleteTransaction = (async(req,res) => 
     try{
         const {transactionId} = req.query
         await Transaction.findOneAndRemove({transactionId: transactionId })
